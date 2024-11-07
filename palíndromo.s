@@ -11,7 +11,7 @@ vetor:   .space 100
 
 	.text
  main:
-	main:
+
 
 ###################################################################################
  ########### IMPRIME PEDINDO O NUMERO DE LETRAS E GUARDA ESSE VALOR################
