@@ -41,10 +41,13 @@ vetor:   .space 100                                   # espaço para a string
 WHILE:
 	bge $t0, $t1, FIM_WHILE     # Se i >= j, fim do loop (palíndromo)
 
-	lb $t2, 0($a0)              # Carrega caractere de vetor[i]
-	lb $t3, 0($a0)              # Carrega caractere de vetor[j]
-	add $t2, $t2, $t0           # Carrega vetor[i]
-	add $t3, $t3, $t1           # Carrega vetor[j]
+	# Carrega o caractere de vetor[i] (esquerda)
+	add $t2, $a0, $t0           # Endereço de vetor[i]
+	lb $t2, 0($t2)              # Carrega o caractere em $t2
+
+	# Carrega o caractere de vetor[j] (direita)
+	add $t3, $a0, $t1           # Endereço de vetor[j]
+	lb $t3, 0($t3)              # Carrega o caractere em $t3
 
 	bne $t2, $t3, FALSO         # Se os caracteres não forem iguais, não é palíndromo
 
