@@ -4,7 +4,7 @@
 	.data
 ms:		.asciiz " "
 tamanho:	.asciiz "Insira o numero de letras da palavra:  "
-palavra:	.asciiz "Insira a palavra"
+palavra:	.asciiz "Insira a palavra: "
 true_msg: .asciiz " The string is a palindrome!"
 false_msg: .asciiz " The string is not a palindrome!"
 vetor:   .space 100                                  
